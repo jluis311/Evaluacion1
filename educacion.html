@@ -10,6 +10,7 @@
   <body>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
     <!-- Created with Inkscape (http://www.inkscape.org/) -->
+    <!--El Logo se crea utilizando Inkscape -->
     <svg
        xmlns:dc="http://purl.org/dc/elements/1.1/"
        xmlns:cc="http://creativecommons.org/ns#"
@@ -210,6 +211,7 @@
       <li> <a href="Educacion.html">Educación</a> </li>
       <li> <a href="Experiencia.html">Experiencia Laboral</a> </li>
     </ul>
+    <!--Acá va la información de Educación en una tabla -->
     <h2>Educación</h2>
     <table border="1" cellpadding="10" cellspacing="0">
 			<thead>
@@ -241,39 +243,50 @@
 				</tr>
 			</tbody>
 		</table>
-
-    <form action="#" method="post" >
-      <h3>Agregar Educación.</h3>
-      <p>
-        <label for="año"><strong>Año:</strong> </label>
-        <br>
-        <input type="text" name="año" placeholder="1996" required>
-      </p>
-      <p>
-        <label for="instituto" ><strong>Institución:</strong> </label>
-        <br>
-        <input type="text" name="instituto" placeholder="Nombre de la Institución" required>
-      </p>
-      <p>
-        <label for="lugar"><strong>Lugar:</strong> </label>
-        <br>
-        <textarea name="lugar" id="lugar" cols="30" rows="3"></textarea>
-      </p>
-      <p>
-        <label for="culmino"><strong>¿Culminó?:</strong></label>
-        <br>
-        <input type="radio" name="culmino"> Si
-        <br>
-        <input type="radio" name="culmino"> No
-      </p>
-      <input type="button" name="" value="Agregar" >
+    <br>
+    <!--Se define un formulario para agregar educación. Todos los campos son requeridos-->
+    <form name="formEducacion">
+      <fieldset name="educacion">
+          <legend><strong>Agregar Educación</strong></legend>
+          <p>
+            <label for="year"><strong>Año:</strong> </label>
+            <br>
+            <select name="year" required >
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+            </select>
+          </p>
+          <p>
+            <label for="instituto" ><strong>Institución:</strong> </label>
+            <br>
+            <input type="text" name="instituto" placeholder="Nombre de la Institución" required>
+          </p>
+          <p>
+            <label for="lugar"><strong>Lugar:</strong> </label>
+            <br>
+            <textarea name="lugar" id="lugar" cols="30" rows="3" required></textarea>
+          </p>
+          <p>
+            <label for="culmino"><strong>¿Culminó?:</strong></label>
+            <br>
+            <input type="radio" name="culmino"> Si
+            <br>
+            <input type="radio" name="culmino"> No
+          </p>
+          <input type="button" name="" value="Agregar" > <input type="reset" name="" value="Limpiar">
+      </fieldset>
     </form>
 
   </body>
 
   <footer>
     <br>
-    Derechos Reservados
+    <strong>Derechos Reservados</strong>
     <ul>
       <li><a href="mailto:jluis311@gmail.com">Escríbeme al Correo</a></li>
       <li><strong>Teléfono:</strong> +507 6279-1652</li>
